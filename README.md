@@ -26,6 +26,14 @@ Agent skill for browser automation via Chrome DevTools Protocol. Forked from [pa
 |---|---|
 | [chrome-cdp](chrome-cdp-skill/skills/chrome-cdp) | Control a Chrome browser from AI agents using the CDP protocol |
 
+### [personal-skills](personal-skills/)
+
+Personal skills not tied to any upstream.
+
+| Skill | Description |
+|---|---|
+| [yeet](personal-skills/yeet) | Stage, commit, push, and open a GitHub PR in one flow using the GitHub CLI |
+
 ## Upstream sync
 
 See [UPSTREAM.md](UPSTREAM.md) for instructions on checking for and applying upstream changes from both source repos.
