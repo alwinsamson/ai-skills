@@ -1,6 +1,6 @@
 # Upstream Sync
 
-This repo wraps two upstream skill collections in named subfolders. A plain `git pull` won't work cleanly against either upstream because their directory layouts differ from ours. Instead, use `git fetch` to preview changes, then copy files manually.
+This repo wraps three upstream skill collections in named subfolders. A plain `git pull` won't work cleanly against any upstream because their directory layouts differ from ours. Instead, use `git fetch` to preview changes, then copy files manually.
 
 ## Git remotes
 
@@ -8,6 +8,7 @@ This repo wraps two upstream skill collections in named subfolders. A plain `git
 |---|---|---|
 | `obsidian-skills` | https://github.com/kepano/obsidian-skills.git | `obsidian-skills/` |
 | `chrome-cdp-skill` | https://github.com/pasky/chrome-cdp-skill.git | `chrome-cdp-skill/` |
+| `generate-shortcuts-skill` | https://github.com/drewocarr/generate-shortcuts-skill.git | `generate-shortcuts-skill/` |
 
 ## Skills inventory
 
@@ -27,6 +28,12 @@ This repo wraps two upstream skill collections in named subfolders. A plain `git
 |---|---|
 | `chrome-cdp` | Control a Chrome browser from AI agents using the Chrome DevTools Protocol |
 
+### generate-shortcuts-skill/
+
+| Skill | Description |
+|---|---|
+| `shortcuts-generator` | Generate macOS/iOS Shortcuts by creating plist files, including actions, variables, and control flow |
+
 ---
 
 ## Checking for upstream changes
@@ -44,6 +51,13 @@ git diff obsidian-skills/main -- skills/
 ```bash
 git fetch chrome-cdp-skill
 git diff chrome-cdp-skill/main
+```
+
+### generate-shortcuts-skill
+
+```bash
+git fetch generate-shortcuts-skill
+git diff generate-shortcuts-skill/main
 ```
 
 ---
@@ -69,4 +83,15 @@ rm -rf chrome-cdp-skill/.git
 rm -rf /tmp/cdp-update
 git add chrome-cdp-skill/
 git commit -m "chore: sync chrome-cdp-skill from upstream"
+```
+
+## Updating generate-shortcuts-skill
+
+```bash
+git clone --depth=1 https://github.com/drewocarr/generate-shortcuts-skill /tmp/shortcuts-update
+cp -r /tmp/shortcuts-update/. generate-shortcuts-skill/
+rm -rf generate-shortcuts-skill/.git
+rm -rf /tmp/shortcuts-update
+git add generate-shortcuts-skill/
+git commit -m "chore: sync generate-shortcuts-skill from upstream"
 ```
