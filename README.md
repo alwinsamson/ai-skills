@@ -26,6 +26,14 @@ Agent skill for browser automation via Chrome DevTools Protocol. Forked from [pa
 |---|---|
 | [chrome-cdp](chrome-cdp-skill/skills/chrome-cdp) | Control a Chrome browser from AI agents using the CDP protocol |
 
+### [generate-shortcuts-skill](generate-shortcuts-skill/)
+
+Agent skill for generating macOS/iOS Shortcuts as signed `.shortcut` plist files. Forked from [drewocarr/generate-shortcuts-skill](https://github.com/drewocarr/generate-shortcuts-skill).
+
+| Skill | Description |
+|---|---|
+| [shortcuts-generator](generate-shortcuts-skill/) | Generate macOS/iOS Shortcuts by creating plist files, including actions, variables, and control flow |
+
 ### [personal-skills](personal-skills/)
 
 Personal skills not tied to any upstream.
@@ -36,4 +44,4 @@ Personal skills not tied to any upstream.
 
 ## Upstream sync
 
-See [UPSTREAM.md](UPSTREAM.md) for instructions on checking for and applying upstream changes from both source repos.
+See [UPSTREAM.md](UPSTREAM.md) for instructions on checking for and applying upstream changes from the tracked upstream sources.
